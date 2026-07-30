@@ -1,8 +1,4 @@
-# Approach — Monocular Visual Localization
-
-**Summary:** classical geometric visual odometry on OpenCV (no deep
-learning), runs sequentially frame by frame, reports a status at every step
-(`INITIALIZING` / `TRACKING` / `LOST` / `RELOCALIZED`).
+# Approach — Visual Localization
 
 ## Pipeline
 
@@ -22,7 +18,7 @@ learning), runs sequentially frame by frame, reports a status at every step
    verifies the pose with PnP.
 6. **Re-init after prolonged loss** — if relocalization doesn't recover in
    time, falls back to two-view re-initialization, glued onto the last known
-   pose (honestly not a verified loop closure — see Limitations).
+   pose.
 7. **Visualization** — tracked points + status banner on the frame, plus a
    top-down 2D plot of the accumulated trajectory.
 
@@ -45,7 +41,6 @@ learning), runs sequentially frame by frame, reports a status at every step
 
 ## Known limitations
 
-- No global loop closure or bundle adjustment — this is local keyframe-based
   VO, not a full SLAM back-end; drift is never globally corrected.
 - Re-initialization after long tracking loss is a visual stitch, not a
   geometrically verified loop closure — drift during the loss gets baked in.
