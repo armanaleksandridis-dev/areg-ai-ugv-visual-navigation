@@ -1,3 +1,11 @@
-opencv-python-headless==5.0.0.93
-numpy==2.5.1
-PyYAML==6.0.3
+# Jetson (Python 3.8, aarch64) compatible pins.
+# numpy 2.x needs Python >= 3.9, so we cap below 2 here.
+numpy>=1.21,<2
+ 
+# Headless OpenCV: no GUI deps, works over SSH. Note: cv2.imshow is NOT
+# available in the headless build, so run with --headless (default in README).
+# For the live window (drop --headless) install opencv-python instead.
+opencv-python-headless>=4.5,<6
+ 
+# Required by load_calibration() -> import yaml
+PyYAML>=5.3
