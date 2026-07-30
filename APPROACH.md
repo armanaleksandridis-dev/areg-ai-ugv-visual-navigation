@@ -41,7 +41,6 @@
 
 ## Known limitations
 
-  VO, not a full SLAM back-end; drift is never globally corrected.
 - Re-initialization after long tracking loss is a visual stitch, not a
   geometrically verified loop closure — drift during the loss gets baked in.
 - Large flat, low-texture surfaces (solar panels) are the main cause of
