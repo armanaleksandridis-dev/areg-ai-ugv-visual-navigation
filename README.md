@@ -1,8 +1,4 @@
-# Monocular Visual Localization — Areg.ai Test Task
-
-Sequential monocular visual odometry on OpenCV (KLT tracking + Essential
-init + PnP tracking against a local 3D map + keyframe relocalization). See
-`APPROACH.md` for the write-up.
+# Visual Localization — Areg.ai Test Task
 
 ## Video links
 
@@ -20,7 +16,7 @@ pip install -r requirements.txt
 ## Run
 
 ```bash
-python3 ugv_visual_navigation.py --video path/to/video.mp4 --calib config.yaml --headless --save-video
+python3 ugv_visual_navigation.py --video rosbag2_2026_07_22-15_40_59__rgb_image.mp4 --scale 0.5 --headless --skip 1 --log-every 1 --save-video --set max_map_points=8000 --set lost_grace=8 --set reinit_after=20 --set max_jump=5.0 --set init_parallax=2.5 --max-features=2000
 ```
 
 Outputs: `video_output/*.mp4` (visualization), `trajectory_output/*.csv`
@@ -35,7 +31,3 @@ Useful flags: `--scale 0.5`, `--skip 1`, `--max-features 500`,
 - `config.yaml` — camera calibration (fill in fx, fy, cx, cy, dist)
 - `requirements.txt` — dependencies
 - `APPROACH.md` — method, decisions, limitations
-
-At the end of a run the script prints tracking-state percentages and three
-FPS figures (VO-only / pipeline / wall-clock) with a real-time verdict
-against the camera's actual frame rate.
