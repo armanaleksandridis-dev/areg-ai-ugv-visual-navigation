@@ -1,1 +1,0 @@
-python3 ugv_visual_navigation.py --video rosbag2_2026_07_22-15_40_59__rgb_image.mp4 --scale 0.5 --headless --skip 1 --log-every 1 --save-video --set max_map_points=8000 --set lost_grace=8 --set reinit_after=20 --set max_jump=5.0 --set init_parallax=2.5 --max-features=2000
