@@ -3,7 +3,7 @@
 ## Video links
 
 - Source video: https://drive.google.com/file/d/1V99JtQDdRgFUuPsN_GS1L7GYwlODocBQ/view
-- Result (trajectory, 89% tracked): https://drive.google.com/file/d/1exC7ZfPoWWgmmQwAEMDU3DpD2jq8M_uQ/view?usp=sharing
+- Result (trajectory, 88% tracked): https://drive.google.com/file/d/1IVMOcuUsShQ8Ruh73HzqgH8SSu4HINzI/view?usp=sharing
 
 ## Setup
 
