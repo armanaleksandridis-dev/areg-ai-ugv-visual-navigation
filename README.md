@@ -1,5 +1,4 @@
-# Visual Localization — Areg.ai Test Task
-
+# Visual Localization
 ## Video links
 
 - Source video: https://drive.google.com/file/d/1V99JtQDdRgFUuPsN_GS1L7GYwlODocBQ/view
